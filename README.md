@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Delta's AI Customer Support Chatbot
+
+## Overview
+
+Delta's AI Customer Support Chatbot is an advanced conversational AI solution designed to provide efficient and effective customer support. Built using Next.js, React, Meta Llama3 which was trained using RAG based on the dataset present in S3 buckets and pinecone, this chatbot aims to enhance user experience by delivering intelligent and responsive support. The project is deployed on EC2, ensuring seamless integration and continuous deployment.
+
+## Features
+
+- **AI-Powered Responses:** Utilizes Llama3 to generate intelligent and context-aware responses to customer inquiries which was trained using RAG.
+- **Chat Interface:** A user-friendly chat interface built with React and Next.js for an engaging user experience.
+- **Continuous Deployment:** Deployed on AWS EC2 with CI/CD integration for automatic updates and improvements.
+- **Feedback Mechanism:** Collects user feedback to continuously improve the chatbot's performance.
+- **Multi-Language Support (Bonus):** Supports multiple languages to cater to a diverse user base.
+
+## Project Structure
+
+- `pages/`: Contains the Next.js pages and API routes.
+- `components/`: React components used in the chat interface.
+- `public/`: Static assets such as images and styles.
+- `styles/`: CSS files for styling the application.
+- `utils/`: Utility functions and API integration code.
+- `scripts/`: Contains boto implementation to collect the user query and generate response from the LLM. 
 
 ## Getting Started
 
-First, run the development server:
+To get started with the project locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/AswinKumar1/Delta-s-AI-customer-support-chatbot.git
+   cd Delta-s-AI-customer-support-chatbot
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Install Dependencies:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. **Set Up Environment Variables:**
 
-To learn more about Next.js, take a look at the following resources:
+   Create a `.env.local` file in the root directory and add the following environment variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```
+   API_KEY=your_api_key
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Run the Development Server:**
 
-## Deploy on Vercel
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   Open your browser and navigate to `http://localhost:3000` to see the chatbot in action.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+The project is deployed on AWS EC2. 
+
+## Usage
+
+To use the chatbot, simply type your queries into the chat interface, and the AI will respond with relevant and intelligent answers. You can provide feedback on the responses to help improve the chatbot's performance.
+
+## Contributing
+
+Feel free to contribute to the project by submitting issues or pull requests. Please ensure that your contributions adhere to the project's coding standards and guidelines.
+
+---
+
+Thank you for exploring our version of Delta's AI Customer Support Chatbot!
